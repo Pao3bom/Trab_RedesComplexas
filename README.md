@@ -1,58 +1,58 @@
-# Aplicação de redes complexas para analisar como a cooperação é influenciada pela topologia da rede
+# Application of complex networks to analyze how cooperation is influenced by network topology
 
-No contexto de redes complexas, 'Cooperação'  é um campo de estudo que explora como agentes individuais (como pessoas, organizações, ou entidades biológicas) interagem e colaboram em sistemas interconectados e dinâmicos. 
+In the context of complex networks, 'Cooperation' is a field of study that explores how individual agents (such as people, organizations, or biological entities) interact and collaborate in interconnected and dynamic systems.
 
-Além disso, a topologia de uma rede complexa refere-se à estrutura e organização das conexões (arestas) entre os elementos (nós) da rede. É essencialmente o "mapa" de como os nós estão conectados uns aos outros. A topologia de uma rede complexa pode influenciar significativamente o comportamento e as propriedades dinâmicas da rede.
+Furthermore, the topology of a complex network refers to the structure and organization of connections (edges) between the elements (nodes) of the network. It is essentially the "map" of how nodes are connected to each other. The topology of a complex network can significantly influence the behavior and dynamic properties of the network.
 
-O projeto neste repositório busca entender como topologias diferentes (Erdős-Rényi, Watts-Strogatz e Barabási-Albert) podem estimular a cooperação de seus agentes envolvidos.
+The project in this repository seeks to understand how different topologies (Erdős-Rényi, Watts-Strogatz and Barabási-Albert) can stimulate the cooperation of the agents involved.
 
-Para tanto, foram realizadas simulações utilizando um modelo baseado no dilema do prisioneiro iterado, um jogo amplamente utilizado para estudar a cooperação em sistemas dinâmicos. O dilema do prisioneiro iterado permite analisar como a cooperação pode emergir e se sustentar em um ambiente onde os agentes têm a opção de cooperar ou trair (defectar) em cada interação.
+To this end, simulations were carried out using a model based on the iterated prisoner's dilemma, a game widely used to study cooperation in dynamic systems. The iterated prisoner's dilemma allows us to analyze how cooperation can emerge and sustain itself in an environment where agents have the option to cooperate or betray (defect) in each interaction.
 
-## Metodologia
-### Geração das Redes:
+## Methodology
+### Network Generation:
 
-- Erdős-Rényi: Redes geradas aleatoriamente onde cada par de nós tem a mesma probabilidade de estar conectado.
-- Watts-Strogatz: Redes de mundo pequeno que introduzem aleatoriedade em uma rede regular, permitindo a presença de curtos caminhos globais e alta aglomeração local.
-- Barabási-Albert: Redes livres de escala onde alguns nós (hubs) têm muitas conexões, enquanto a maioria tem poucas, seguindo uma distribuição de lei de potência.
+- Erdős-Rényi: Randomly generated networks where each pair of nodes has the same probability of being connected.
+- Watts-Strogatz: Small-world networks that introduce randomness into a regular network, allowing the presence of short global paths and high local clustering.
+- Barabási-Albert: Scale-free networks where some nodes (hubs) have many connections, while the majority have few, following a power law distribution.
 
-### Implementação do Modelo de Cooperação:
+### Implementation of the Cooperation Model:
 
-- Cada nó da rede representa um agente que pode escolher entre cooperar ou trair.
-- As interações entre agentes são determinadas pelas conexões (arestas) da rede.
-- A tentação para traição é um parâmetro ajustável que influencia a decisão dos agentes de cooperar ou não.
+- Each node in the network represents an agent who can choose between cooperating or betraying.
+- Interactions between agents are determined by the connections (edges) of the network.
+- The temptation to cheat is an adjustable parameter that influences agents' decision to cooperate or not.
 
-### Simulações:
+### Simulations:
 
-- Realização de múltiplas iterações para cada tipo de rede e configuração de parâmetros.
-- Monitoramento da fração de agentes cooperadores ao longo do tempo.
-- Variação da tentação para defecção para analisar seu impacto na cooperação.
+- Carrying out multiple iterations for each type of network and parameter configuration.
+- Monitoring the fraction of cooperating agents over time.
+- Variation of temptation to defection to analyze its impact on cooperation.
 
-## Resultados
-### Redes Erdős-Rényi:
+## Results
+### Erdős-Rényi Networks:
 
-A cooperação tende a diminuir rapidamente com o aumento da tentação para defecção. Essas redes mostram uma menor robustez à cooperação comparadas às outras topologias.
+Cooperation tends to decrease rapidly as the temptation to defection increases. These networks show less robustness to cooperation compared to other topologies.
 
 
-### Redes Watts-Strogatz:
+### Watts-Strogatz Networks:
 
-Apresentam uma maior robustez para cooperação, mantendo níveis relativamente altos de cooperação mesmo com aumentos na tentação para defecção. A estrutura de mundo pequeno facilita a manutenção de clusters cooperativos.
+They present greater robustness for cooperation, maintaining relatively high levels of cooperation even with increases in the temptation to defection. The small-world structure makes it easier to maintain cooperative clusters.
 
-### Redes Barabási-Albert:
+### Barabási-Albert Networks:
 
-Redes com crescimento linear e sublinear mostram uma alta robustez à cooperação, mantendo níveis elevados de agentes cooperadores mesmo sob alta tentação para defecção.
-Redes com crescimento superlinear, por outro lado, mostram uma robustez significativamente menor à cooperação.
+Networks with linear and sublinear growth show high robustness to cooperation, maintaining high levels of cooperating agents even under high temptation for defection.
+Networks with superlinear growth, on the other hand, show significantly lower robustness to cooperation.
 
-# Conclusões
-Este projeto demonstrou que a topologia da rede tem um impacto significativo na capacidade de uma rede manter níveis elevados de cooperação entre seus agentes. Redes Barabási-Albert lineares e sublineares são as mais eficientes em sustentar a cooperação, enquanto redes Erdős-Rényi são as menos eficientes. Redes Watts-Strogatz ocupam uma posição intermediária, combinando características de ambos os tipos de redes.
+# Conclusions
+This project demonstrated that network topology has a significant impact on the ability of a network to maintain high levels of cooperation between its agents. Linear and sublinear Barabási-Albert networks are the most efficient in sustaining cooperation, while Erdős-Rényi networks are the least efficient. Watts-Strogatz networks occupy an intermediate position, combining characteristics of both types of networks.
 
-Os resultados sugerem que, ao projetar sistemas e redes para maximizar a cooperação (como em redes sociais, sistemas colaborativos e ecossistemas biológicos), a escolha da topologia é crucial. Redes com hubs bem conectados (como as Barabási-Albert) podem fornecer uma estrutura mais robusta para a cooperação, especialmente quando a tentação para defecção é alta.
+The results suggest that when designing systems and networks to maximize cooperation (such as in social networks, collaborative systems, and biological ecosystems), the choice of topology is crucial. Networks with well-connected hubs (such as Barabási-Albert) can provide a more robust framework for cooperation, especially when the temptation to defection is high.
 
-# Aplicações Práticas Possíveis
-- Redes Sociais: Entender como a estrutura da rede social pode promover a colaboração e reduzir comportamentos negativos.
-Organizações: Projetar estruturas organizacionais que incentivem a cooperação entre os funcionários.
-- Ecossistemas: Compreender como diferentes espécies interagem e colaboram em um ecossistema.
+# Possible practical applications
+- Social Networks: Understand how the structure of social networks can promote collaboration and reduce negative behaviors.
+Organizations: Design organizational structures that encourage cooperation among employees.
+- Ecosystems: Understand how different species interact and collaborate in an ecosystem.
 
-# Referências
-- Playlist do prof. Francisco Rodrigues (também responsável pela matéria lecionada presencialmente no ICMC-USP): https://www.youtube.com/playlist?list=PLSc7xcwCGNh0HHNJlZBMBK6MzpdwNSzVT
-- Cardillo, Alessio & Gómez-Gardeñes, Jesus & Vilone, Daniele & Sánchez, Angel. (2010). Coevolution of strategies and update rules in complex Prisoner's Dilemma networks. New Journal of Physics. 12. 103034. 10.1088/1367-2630/12/10/103034. 
+# References
+- Prof.'s playlist Francisco Rodrigues in brazilian portuguese (also responsible for the material taught in person at ICMC-USP): https://www.youtube.com/playlist?list=PLSc7xcwCGNh0HHNJlZBMBK6MzpdwNSzVT
+- Cardillo, Alessio & Gómez-Gardeñes, Jesus & Vilone, Daniele & Sánchez, Angel. (2010). Coevolution of strategies and update rules in complex Prisoner's Dilemma networks. New Journal of Physics. 12. 103034. 10.1088/1367-2630/12/10/103034.
 - Poncela, J., Gómez-Gardeñes, J., Floría, L. M., & Moreno, Y. (2007). Robustness of cooperation in the evolutionary prisoner's dilemma on complex networks. New Journal of Physics, 9(6), 184. [doi: 10.1088/1367-2630/9/6/184]
